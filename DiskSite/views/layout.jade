@@ -1,0 +1,23 @@
+﻿doctype html
+html
+  head
+    title= title
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel='stylesheet', href='/stylesheets/pure-min.css')
+    link(rel='stylesheet', href='/stylesheets/glyphicons.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div#layout
+      a#menuLink.menu-link
+        span
+      div#menu
+        div.pure-menu
+          a.pure-menu-heading(href="#") Pro Disk
+          ul.pure-menu-list
+            li.pure-menu-item
+              a.pure-menu-link(href="#")
+                span.glyphicons.glyphicons-home
+                | &nbsp;Home
+    block content
+    script(src="/javascripts/jquery-2.1.4.min.js")
+    script(src="/javascripts/ui.js")

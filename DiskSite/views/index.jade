@@ -1,0 +1,65 @@
+﻿extends layout
+
+block content
+    div#main
+      header.header
+        h1 Pro Disk Home
+      div.content
+        section#StartForm
+          form.pure-form.pure-form-aligned
+            fieldset
+               legend Info Form
+              div.pure-control-group
+                label(for='firstName')
+                  i.glyphicons.glyphicons-user
+                  | &nbsp;First Name
+                input#firstName(name="firstName", type="text", placeholder="First Name", required)
+              div.pure-control-group
+                label(for='lastName')
+                  i.glyphicons.glyphicons-user
+                  | &nbsp;Last Name
+                input#lastName(name="lastName", type="text", placeholder="Last Name", required)
+              div.pure-control-group
+                label(for="Course")
+                  i.glyphicons.glyphicons-golf-course
+                  | &nbsp;Course
+                input#courseName(name="courseName", type="text", placeholder="Course", required)
+              div.pure-controls
+                button.pure-button.pure-button-primary
+                  i.glyphicons.glyphicons-ok-2
+                  | &nbsp;Start Course
+        section#HoleForm
+          form.pure-form.pure-form-aligned
+            fieldset
+              legend Hole Score
+              div.pure-control-group
+                label(for="hole") Hole
+                input#hole(name="hole", type="number", value="1", min="1", max="100", readonly)
+              div.pure-control-group
+                label(for='score')
+                  | &nbsp;Score
+                span
+                  button#minusScore.pure-button.button-error.btn-number(data-type='minus', data-field='score')
+                    i.glyphicons.glyphicons-circle-minus
+                  input#score.input-number(name="score", type="number", value="3", min="1", max="30", required)
+                  button#addScore.pure-button.button-success.btn-number(data-type='plus', data-field='score')
+                    i.glyphicons.glyphicons-circle-plus
+              div.pure-control-group
+                label(for='par')
+                  | &nbsp;Par
+                span
+                  button#minusPar.pure-button.button-error.btn-number(data-type='minus', data-field='par')
+                    i.glyphicons.glyphicons-circle-minus
+                  input#par.input-number(name="par", type="number", value="3", min="1", max="10", required)
+                  button#addPar.pure-button.button-success.btn-number(data-type='plus', data-field='par')
+                    i.glyphicons.glyphicons-circle-plus
+              div.pure-controls
+                button.pure-button.pure-button-primary
+                  i.glyphicons.glyphicons-circle-arrow-left
+                  | &nbsp;Previous
+                button.pure-button.pure-button-primary
+                  i.glyphicons.glyphicons-ok-2
+                  | &nbsp;Save
+                button.pure-button.pure-button-primary
+                  | Next&nbsp;
+                  i.glyphicons.glyphicons-circle-arrow-right
