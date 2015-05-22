@@ -16,6 +16,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 !bin/www-example
+
 # Roslyn cache directories
 *.ide/
 
@@ -188,3 +189,4 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+/DiskSite/.ntvs_analysis.dat
