@@ -1,4 +1,11 @@
-﻿(function (window, document) {
+﻿var courseData = {
+  firstName: null,
+  lastName: null,
+  course: null,
+  holes: []
+};
+
+(function (window, document) {
   
   var layout = document.getElementById('layout'),
       menu = document.getElementById('menu'),
@@ -34,6 +41,19 @@
 
 }(this, this.document));
 
+$('#SubmitStart').click(function (e) {
+  e.preventDefault();
+  
+  var _firstName = $('#firstName');
+  var _lastName = $('#lastName');
+  var _course = $('#courseName');
+  
+  courseData.firstName = _firstName.val();
+  courseData.lastName = _lastName.val();
+  courseData.course = _course.val();
+  $('#StartForm').fadeOut();
+  $('#HoleForm').fadeIn();
+});
 
 $('.btn-number').click(function (e) {
   e.preventDefault();

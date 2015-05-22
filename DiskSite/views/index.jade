@@ -3,7 +3,7 @@
 block content
     div#main
       header.header
-        h1 Pro Disk Home
+        h1 Pro Disk
       div.content
         section#StartForm
           form.pure-form.pure-form-aligned
@@ -25,10 +25,10 @@ block content
                   | &nbsp;Course
                 input#courseName(name="courseName", type="text", placeholder="Course", required)
               div.pure-controls
-                button.pure-button.pure-button-primary
+                button#SubmitStart.pure-button.pure-button-primary
                   i.glyphicons.glyphicons-ok-2
                   | &nbsp;Start Course
-        section#HoleForm
+        section#HoleForm(style="display: none;")
           form.pure-form.pure-form-aligned
             fieldset
               legend Hole Score
