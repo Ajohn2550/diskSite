@@ -54,7 +54,31 @@ $('#SubmitStart').click(function (e) {
   $('#StartForm').fadeOut();
   $('#HoleForm').fadeIn();
 });
+$('#nextHole').click(function (e) {
+  e.preventDefault();
 
+  var _hole = $('#hole');
+  var _score = $('#score');
+  var _par = $('#par');
+
+  courseData.holes.push({ Hole: parseInt(_hole.val()), Score: parseInt(_score.val()), Par: parseInt(_par.val()) });
+
+  _hole.val(parseInt(_hole.val()) + 1);
+  _score.val(3);
+  _par.val(3);
+});
+$('#saveCourse').click(function (e) {
+  e.preventDefault();
+  
+  console.log(courseData);
+
+  courseData = {
+    firstName: null,
+    lastName: null,
+    course: null,
+    holes: []
+  };
+});
 $('.btn-number').click(function (e) {
   e.preventDefault();
   

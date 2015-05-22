@@ -48,16 +48,16 @@ block content
                 label(for='par')
                   | &nbsp;Par
                 span.pure-g
-                  button#minusPar.pure-button.button-error.btn-number.pure-u-1-3(data-type='minus', data-field='par')
+                  button#minusPar.pure-button.button-error.btn-number.pure-u-1-3(sdata-type='minus', data-field='par')
                     i.glyphicons.glyphicons-circle-minus
                   input#par.input-number.pure-u-1-3(name="par", type="number", value="3", min="1", max="10", required)
                   button#addPar.pure-button.button-success.btn-number.pure-u-1-3(data-type='plus', data-field='par')
                     i.glyphicons.glyphicons-circle-plus
               div.pure-controls
-                button.pure-button.pure-button-primary.btn-space-right
+                button#previousHole.pure-button.pure-button-primary.btn-space-right(disabled)
                   i.glyphicons.glyphicons-circle-arrow-left
-                button.pure-button.pure-button-primary
+                button#saveCourse.pure-button.pure-button-primary
                   i.glyphicons.glyphicons-ok-2
                   | &nbsp;Save
-                button.pure-button.pure-button-primary.btn-space-left
+                button#nextHole.pure-button.pure-button-primary.btn-space-left
                   i.glyphicons.glyphicons-circle-arrow-right
