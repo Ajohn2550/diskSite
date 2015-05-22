@@ -36,7 +36,6 @@
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
     <Compile Include="bin\www" />
-    <Content Include="bin\www-example" />
     <Content Include="package.json" />
     <Content Include="public\fonts\glyphicons-regular.eot" />
     <Content Include="public\fonts\glyphicons-regular.svg" />
@@ -50,6 +49,7 @@
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
     <Content Include="views\error.jade" />
+    <Content Include="www-example" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
