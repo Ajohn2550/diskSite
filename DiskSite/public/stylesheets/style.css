@@ -2,6 +2,24 @@ body {
     color: #777;
 }
 
+.btn-space-left {
+  margin-left: 1em;
+}
+.btn-space-right {
+  margin-right: 1em;
+}
+
+.input-number {
+  text-align: center;
+  width: 4em;
+  margin: 0;
+  padding: 0;
+}
+.btn-number {
+  text-align: center;
+  margin: 0 !important;
+}
+
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
