@@ -36,6 +36,7 @@
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
     <Compile Include="bin\www" />
+    <Content Include="bin\www-example" />
     <Content Include="package.json" />
     <Content Include="public\fonts\glyphicons-regular.eot" />
     <Content Include="public\fonts\glyphicons-regular.svg" />
