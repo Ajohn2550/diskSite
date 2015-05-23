@@ -1,8 +1,8 @@
 ﻿var courseData = {
-  firstName: null,
-  lastName: null,
-  course: null,
-  holes: []
+  FirstName: null,
+  LastName: null,
+  Course: null,
+  Holes: []
 };
 
 (function (window, document) {
@@ -48,9 +48,9 @@ $('#SubmitStart').click(function (e) {
   var _lastName = $('#lastName');
   var _course = $('#courseName');
   
-  courseData.firstName = _firstName.val();
-  courseData.lastName = _lastName.val();
-  courseData.course = _course.val();
+  courseData.FirstName = _firstName.val();
+  courseData.LastName = _lastName.val();
+  courseData.Course = _course.val();
   $('#StartForm').fadeOut();
   $('#HoleForm').fadeIn();
 });
@@ -61,7 +61,7 @@ $('#nextHole').click(function (e) {
   var _score = $('#score');
   var _par = $('#par');
 
-  courseData.holes.push({ Hole: parseInt(_hole.val()), Score: parseInt(_score.val()), Par: parseInt(_par.val()) });
+  courseData.Holes.push({ Hole: parseInt(_hole.val()), Score: parseInt(_score.val()), Par: parseInt(_par.val()) });
 
   _hole.val(parseInt(_hole.val()) + 1);
   _score.val(3);
@@ -69,14 +69,28 @@ $('#nextHole').click(function (e) {
 });
 $('#saveCourse').click(function (e) {
   e.preventDefault();
-  
-  console.log(courseData);
+  var _url = '/api/scores';
+  $.ajax({
+    "url": _url,
+    "method": "POST",
+    "contentType": 'application/json',
+    "dataType": 'json',
+    "data": JSON.stringify(courseData),
+    "error": function (data) {
+      if (data.error) {
+        alert(data.message);
+      }
+    },
+    "success": function (data) {
+      alert('Saved')
+    }
+  });
 
   courseData = {
-    firstName: null,
-    lastName: null,
-    course: null,
-    holes: []
+    FirstName: null,
+    LastName: null,
+    Course: null,
+    Holes: []
   };
 });
 $('.btn-number').click(function (e) {
