@@ -33,6 +33,7 @@
     <Compile Include="app.js" />
     <Compile Include="models\score.js" />
     <Compile Include="public\javascripts\jquery-2.1.4.min.js" />
+    <Compile Include="public\javascripts\models.js" />
     <Compile Include="public\javascripts\ui.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\api.js" />
